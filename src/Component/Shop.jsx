@@ -7,14 +7,18 @@ import Card from "react-bootstrap/Card";
 
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
+import { Spinner } from "react-bootstrap";
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const getProducts = () => {
+    setLoading(true);
     return fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
       .then((json) => {
+        setLoading(false);
         setProducts(json);
       });
   };
@@ -22,6 +26,10 @@ const Shop = () => {
   useEffect(() => {
     getProducts();
   }, []);
+
+  if (loading) {
+    return <Spinner animation="border" />;
+  }
 
   console.log("products are", products);
   return (
@@ -47,22 +55,6 @@ const Shop = () => {
       </Row>
     </Container>
   );
-
-  //   return (
-  //     <>
-  //       <h4>Shop</h4>
-
-  //       {products?.map((pro) => {
-  //         return (
-  //           <>
-  //             <img src={pro.image} alt="" />
-  //             <p>{pro.title}</p>
-  //             <Link to={`/shop/${pro.id}`}>Show Details</Link>
-  //           </>
-  //         );
-  //       })}
-  //     </>
-  //   );
 };
 
 export default Shop;
