@@ -1,0 +1,26 @@
+// {
+//   "workbench.colorCustomizations": {
+//     "titleBar.activeForeground": "#ffffff",
+//     "titleBar.inactiveForeground": "#e21919e1",
+//     "titleBar.activeBackground": "#1eff00",
+//     "titleBar.inactiveBackground": "#ffc800e0"
+//   },
+
+//   "editor.formatOnSave": true,
+
+//   "[javascript]": {
+//     "editor.formatOnSave": false
+//   },
+
+//   "[javascriptreact]": {
+//     "editor.formatOnSave": false
+//   },
+
+//   "eslint.alwaysShowStatus": true,
+
+//   "editor.codeActionsOnSave": {
+//     "source.fixAll": true
+//   },
+
+//   "prettier.disableLanguages": ["javascript", "javascriptreact"]
+// }
