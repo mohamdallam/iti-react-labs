@@ -24,6 +24,10 @@ const Header = () => {
             <Nav.Link as={Link} to="/counter">
               Counter
             </Nav.Link>
+
+          
+
+        
           </Nav>
         </Navbar.Collapse>
       </Container>
