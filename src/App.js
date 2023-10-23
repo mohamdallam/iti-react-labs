@@ -9,8 +9,7 @@ import Shop from "./Component/Shop";
 import Container from "react-bootstrap/Container";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-
+import SignIn from "./Component/Signin.jsx/SignIn";
 
 function App() {
   return (
@@ -22,7 +21,8 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/counter" element={<Counter />} />
-        
+
+          <Route path="/login" element={<SignIn />} />
 
           <Route path="/shop/:id" element={<Shopdetails />} />
         </Routes>
